@@ -64,3 +64,31 @@ button, input.btn{
     background-position:182px;
   }
 }
+
+.cta_btn{
+  padding: 7px 14px;
+  background-color: $color-electric-purple;
+  border: 2px solid $color-electric-purple;
+  border-radius: 5px;
+  color: $color-black;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s all ease-in-out;
+  svg{
+    width: 16px;
+  transition: .3s all ease-in-out;
+    height: auto;
+    max-height: 25px;
+    object-fit: contain;
+  }
+  &:hover{
+    background-color: transparent;
+    color: $color-electric-purple;
+  }
+
+
+}

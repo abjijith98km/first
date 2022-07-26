@@ -7,12 +7,12 @@
   position: relative;
   .bg_dev_image{
     position: absolute;
-    width: 50%;
+    width: 100%;
     z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    height: 70%;
+    top: 0%;
+    transform: scaleX(-1);
+    left: 0;
+    height: 100%;
     &::after{
       position: absolute;
       content: "";
@@ -24,7 +24,7 @@
       background: linear-gradient(to right,rgba(16,16,16,1) 0% , rgba(16,16,16,0.2) 35%,rgba(16,16,16,0.1) 60% ,rgba(0,0,0,0) 100% );
     }
     img{
-      object-fit: contain;
+      object-fit: cover;
     }
   }
   .container {
@@ -67,7 +67,7 @@
         letter-spacing: 1px;
       }
       button{
-        background-color: $color-azure !important;
+        // background-color: $color-azure !important;
         margin-top: 40px;
         svg{
           width: 20px;
@@ -78,7 +78,7 @@
         }
         &:hover{
           svg{
-            animation: hover 2s infinite;
+            // animation: hover 2s infinite;
             @keyframes hover {
               0%{
                 transform: translateY(-3px);

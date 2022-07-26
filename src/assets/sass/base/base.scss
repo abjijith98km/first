@@ -75,7 +75,7 @@ picture{
 
 @media (min-width: 1200px){
   .container{
-    max-width: 1140px;
+    max-width: 1170px;
   }
 }
 @media (max-width: $desktop-sm){
@@ -153,4 +153,16 @@ img{
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+section{
+  &:hover{
+    .title{
+      h1,h2{
+        &::after{
+          width: 100%;
+        }
+      }
+    }
+  }
 }

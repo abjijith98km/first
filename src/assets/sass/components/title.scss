@@ -1,14 +1,31 @@
 .title{
+  margin-bottom: 35px;
   h1, h2{
     display: inline-flex;
     align-items: center;
     font-style: normal;
     font-weight: bold;
-    font-size: 34px;
-    line-height: 31px;
+    font-size: 45px;
+    line-height: 49px;
+    color: $color-white;
+    position: relative;
+    &::after{
+      transition: .3s all ease-in-out;
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 3px;
+      border-radius: 5px;
+      top: calc(100% + 8px);
+      left: 0;
+      background-color:  $color-dark-orange;
+    }
   } 
-  em{
-    font-style: italic;
+  span{
+    display: block;
+    padding-left: 20px;
+    color: $color-dark-orange;
+    // font-style: italic;
   }
   &.center{
     margin: 0px auto;
