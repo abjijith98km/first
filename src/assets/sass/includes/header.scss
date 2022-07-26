@@ -1,0 +1,49 @@
+.outer-elems {
+  position: fixed;
+  z-index: 1;
+}
+
+.inner-elems {
+  z-index: 0;
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  padding: 14px 0;
+  background-color: rgba($color: #000000, $alpha: .4);
+  .inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      font-size: 45px;
+      line-height: 49px;
+      font-weight: 900;
+      background-image: url(https://images.pexels.com/photos/7004739/pexels-photo-7004739.jpeg?auto=compress&cs=tinysrgb&w=600);
+      display: block;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left center;
+    }
+    nav{
+      ul{
+        display: flex;
+        align-items: center;
+        li{
+          &+li{
+            margin-left: 15px;
+          }
+          a{
+            color: $color-safron;
+            text-decoration: none;
+
+          }
+        }
+      }
+    }
+  }
+}

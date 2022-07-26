@@ -1,0 +1,66 @@
+.btn{
+  border-radius: 6px;
+  height: 44px;
+  min-width: 44px;
+  padding: 10px 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s all;
+  font-size: 16px;
+  line-height: 24px;
+  &:disabled, &[disabled]{
+    cursor: default;
+    pointer-events: none;
+  }
+  &.btn-secondary, &:disabled{
+    background-color: #EEEEEE;
+    font-style: normal;
+    font-weight: bold;
+    color: $color-black;
+    &:hover{
+      background: $color-grey;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+button, input.btn{
+  border: 0px;
+  cursor: pointer;
+}
+
+.rainbow-button {
+  width:max-content;
+  height:max-content;
+  padding: 2px;
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  border-radius:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  font-size:16px;
+  font-weight: 400;
+  font-weight:bold;
+}
+.rainbow-button:after {
+  content:attr(alt);
+  // width:20vw;
+  // height:8vw;
+  border-radius:30px;
+  padding: 5px 15px;
+  background-color:#191919;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.rainbow-button:hover {
+  animation:slidebg 3s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:182px;
+  }
+}

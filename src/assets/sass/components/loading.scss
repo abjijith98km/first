@@ -1,0 +1,86 @@
+@include above($tablet-sm){
+
+  .card {
+    span.loader {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      opacity: 1;
+      visibility: visible;
+      overflow: hidden;
+      transition: 0.5s all;
+      background-color: $color-grey;
+      border-radius: 10px;
+      z-index: 4;
+      opacity: 1;
+      &:after{
+        
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: translateX(-100%);
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(transparent),
+          color-stop(rgba(255, 255, 255, 0.2)),
+          to(transparent)
+        );
+
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+
+        /* Adding animation */
+        animation: loading 0.8s infinite;
+
+      }
+      .title{
+        height: 30px;
+        width: 50%;
+        margin: 0px 20px;
+        bottom: 30px;
+        content: "";
+        display: block;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+    &.loaded {
+      span.loader {
+        opacity: 0;
+        visibility: hidden;
+      } 
+    }
+    &:nth-child(1n){
+      span.loader{
+        transition-delay: 0.3s;
+      }
+    }
+    &:nth-child(2n){
+      span.loader{
+        transition-delay: 0.6s;
+      }
+    }
+    &:nth-child(3n){
+      span.loader{
+        transition-delay: 0.9s;
+      }
+    }
+  }
+
+}
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}

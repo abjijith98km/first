@@ -1,0 +1,20 @@
+.content-block{
+  .img-wrap{
+    picture, img{
+      min-height: 120px;
+      height: auto;
+      width: 496px;
+      @include desktop-sm{
+        // height: 450px;
+        width: 450px;
+      }
+      @include tablet-lg{
+        // height: 320px;
+        width: 320px;
+      }
+      @include tablet-sm{
+        width: 100%;
+      }
+    }
+  }
+}

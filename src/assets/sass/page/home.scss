@@ -1,0 +1,100 @@
+.homepage_top_banner {
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 100%;
+  background-color: #101010;
+  position: relative;
+  .bg_dev_image{
+    position: absolute;
+    width: 50%;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    height: 70%;
+    &::after{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: linear-gradient(to right,rgba(16,16,16,1) 0% , rgba(16,16,16,0.2) 35%,rgba(16,16,16,0.1) 60% ,rgba(0,0,0,0) 100% );
+    }
+    img{
+      object-fit: contain;
+    }
+  }
+  .container {
+    height: 100%;
+  }
+  .homepage_top_banner_wrapper {
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    .title_wrap {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      h1 {
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 114px;
+        color: transparent;
+        // background-image: url(https://images.pexels.com/photos/5071340/pexels-photo-5071340.jpeg?auto=compress&cs=tinysrgb&w=600);
+        // background-image: url(https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=600);
+        // background-image: url(https://images.pexels.com/photos/5049994/pexels-photo-5049994.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-image: url(https://images.pexels.com/photos/7004739/pexels-photo-7004739.jpeg?auto=compress&cs=tinysrgb&w=600);
+
+
+        -webkit-background-clip: text;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // margin-bottom: 15px;
+        span {
+          display: block;
+        }
+      }
+      h6{
+        font-size: 20px;
+        font-weight: 400;
+        color: $color-dark-orange;
+        line-height: 24px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      button{
+        background-color: $color-azure !important;
+        margin-top: 40px;
+        svg{
+          width: 20px;
+          height: auto;
+          object-fit: contain;
+          margin-left: 10px;
+          transition: .1s all ease-in-out;
+        }
+        &:hover{
+          svg{
+            animation: hover 2s infinite;
+            @keyframes hover {
+              0%{
+                transform: translateY(-3px);
+              }
+              50%{
+                transform: translateY(6px);
+              }
+              100%{
+                transform: translateY(-3px);
+              }
+              
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

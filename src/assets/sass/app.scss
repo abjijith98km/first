@@ -1,0 +1,40 @@
+// Bootstraping
+// @import "plugins/bootstrap/functions";
+// @import "plugins/bootstrap/variables";
+// @import "plugins/bootstrap/mixins";
+// @import "plugins/bootstrap/root";
+// @import "plugins/bootstrap/reboot";
+// @import "plugins/bootstrap/grid";
+
+// Utils
+@import "base/variables";
+@import "util/mixins";
+@import "util/spaces";
+
+// Base
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+
+// Pages
+@import "page/home";
+@import "page/about-us";
+
+// Normalise
+@import "vendor/normalise";
+  
+// includes
+@import "includes/header";
+@import "includes/section";
+@import "includes/hero-banner";
+@import "includes/inner-banner";
+@import "includes/footer";
+
+// Components
+@import "components/loading";
+@import "components/validation";
+@import "components/button";
+@import "components/title";
+
+// Should be at last
+@import "components/lazyload.scss";

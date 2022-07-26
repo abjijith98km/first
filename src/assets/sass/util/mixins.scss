@@ -1,0 +1,43 @@
+// Responsive mixins
+@mixin desktop-lg() {
+  @media (max-width: $desktop-lg) {
+    @content;
+  }
+}
+@mixin desktop-sm() {
+  @media (max-width: $desktop-sm) {
+    @content;
+  }
+}
+@mixin tablet-lg() {
+  @media (max-width: $tablet-lg) {
+    @content;
+  }
+}
+@mixin tablet-sm() {
+  @media (max-width: $tablet-sm) {
+    @content; 
+  }
+}
+
+@mixin mobile-lg() {
+  @media (max-width: $mobile-lg) {
+    @content;
+  }
+}
+@mixin mobile-sm() {
+  @media (max-width: $mobile-sm) {
+    @content;
+  }
+}
+
+@mixin below($value) {
+  @media (max-width: $value) {
+    @content;
+  }
+}
+@mixin above($value) {
+  @media (min-width: $value) {
+    @content;
+  }
+}
