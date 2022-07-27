@@ -11,52 +11,91 @@
         object-fit: cover;
       }
     }
+    .my_intro{
+      p{
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 27px;
+        letter-spacing: 1px;
+        color: #ffffff;
+      }
+    }
     .project_card {
       border-radius: 10px;
-      overflow: hidden;
       padding: 0;
       margin-bottom: 45px;
       display: block;
       width: 47%;
-      height: 460px;
-      max-height: 460px;
+      max-height: max-content;
       position: relative;
+      height: 460px;
       .poster_image {
+        overflow: hidden;
         width: 100%;
+        // height: 100%;
+        border-radius: 10px;
         height: 100%;
-        top: 0;
-        left: 0;
-        position: absolute;
+        // top: 0;
+        // left: 0;
+        // position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: -1;
+        background-color: var(--color);
         img {
-          object-fit: cover;
+          width: calc(100% - 130px);
+          height: calc(100% - 130px);
+
+          object-fit: contain;
         }
       }
       picture {
-        // -webkit-clip-path: circle(0.2% at 100% 0);
-        // clip-path: circle(0.2% at 100% 0);
-        opacity: 0;
-        transition: 0.4s all ease-in-out;
+        -webkit-clip-path: circle(0.2% at 100% 0);
+        clip-path: circle(0.2% at 100% 0);
+        border-radius: 10px;
+        display: none;
+
+        // opacity: 0;
+        transition: 0.6s all ease-in-out;
         width: 100%;
-        height: 100%;
+        // height: 100%;
+        height: 460px;
+        max-height: 460px;
+        overflow: hidden;
+        img {
+          object-fit: contain;
+          height: auto;
+          transition: 4s all ease-in;
+          object-position: top center;
+        }
       }
       .project_details {
         width: 100%;
         position: absolute;
         z-index: 1;
-        bottom: 0;
+        top: 0;
+        height: 100%;
         left: 0;
+        border-radius: 0 0 10px 10px;
         padding: 15px 25px;
+        background-color: rgba($color: #000000, $alpha: 0.8);
         text-align: right;
-        background-color: rgba($color: $color-electric-purple, $alpha: 0.9);
-        opacity: 0;
-        transition: 0.3s all ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        // background-color: rgba($color: $color-electric-purple, $alpha: 0.9);
+        // opacity: 0;
+        -webkit-clip-path: circle(0.2% at 100% 0);
+        clip-path: circle(0.2% at 100% 0);
+        transition: 0.6s all ease-in-out;
         h6 {
-          font-size: 17px;
+          font-size: 23px;
           text-transform: uppercase;
           font-weight: 600;
           line-height: 20px;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
           color: $color-white;
           transform: translateX(40px);
           opacity: 0;
@@ -64,7 +103,9 @@
         }
         p {
           margin-bottom: 0;
-          font-size: 12px;
+          font-size: 15px;
+          letter-spacing: 1px;
+          font-weight: 300;
           text-decoration: underline;
           line-height: 15px;
           transition: 0.3s all ease-in-out;
@@ -83,28 +124,20 @@
       //   background: ;
 
       // }
-      picture {
-        width: 100%;
-        height: 100%;
-        img {
-          border-radius: 10px;
-          object-fit: contain;
-          height: auto;
-          transition: 4s all ease-in;
-          object-position: top center;
-        }
-      }
+
       &:nth-child(odd) {
         margin-top: -290px;
       }
       &:hover {
-        box-shadow: 0 0 20px 2px $color-electric-purple;
         picture {
-          // -webkit-clip-path: circle(141.4% at 100% 0);
-          // clip-path: circle(141.4% at 100% 0);
+          -webkit-clip-path: circle(141.4% at 100% 0);
+          clip-path: circle(141.4% at 100% 0);
+          box-shadow: 0 0 2px 1px $color-electric-purple;
           opacity: 1;
         }
         .project_details {
+          -webkit-clip-path: circle(141.4% at 100% 0);
+          clip-path: circle(141.4% at 100% 0);
           h6,
           p {
             transform: translateX(0px);
@@ -113,9 +146,11 @@
           // transform: translateY(0);
           opacity: 1;
         }
-        img {
-          // object-position: bottom center;
-          transform: translateY(calc(-100% + 460px));
+        picture {
+          img {
+            // object-position: bottom center;
+            transform: translateY(calc(-100% + 460px));
+          }
         }
       }
     }

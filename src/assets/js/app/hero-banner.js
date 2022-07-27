@@ -10,10 +10,13 @@ function postMessageToPlayer(player, command) {
 
 
 
-AOS.init({offSet:100,once:false})
+AOS.init({offSet:200,once:false})
 
 // Resize event
 $(window).on("resize.slickVideoPlayer", function () {
   resizePlayer(homeHeroIframes, 16 / 9);
 });
 
+$('#burger_menu').click(function(){
+  $('body').toggleClass('mobile_menu_open')
+})

@@ -9,6 +9,7 @@
     line-height: 49px;
     color: $color-white;
     position: relative;
+    font-family: $base-font-family;
     &::after{
       transition: .3s all ease-in-out;
       content: '';

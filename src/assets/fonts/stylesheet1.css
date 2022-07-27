@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Edu VIC WA NT Beginner';
+    src: url('EduVICWANTBeginner-Bold.woff2') format('woff2'),
+        url('EduVICWANTBeginner-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Edu VIC WA NT Beginner';
+    src: url('EduVICWANTBeginner-Regular.woff2') format('woff2'),
+        url('EduVICWANTBeginner-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Edu VIC WA NT Beginner';
+    src: url('EduVICWANTBeginner-Medium.woff2') format('woff2'),
+        url('EduVICWANTBeginner-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Edu VIC WA NT Beginner';
+    src: url('EduVICWANTBeginner-SemiBold.woff2') format('woff2'),
+        url('EduVICWANTBeginner-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

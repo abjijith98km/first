@@ -12,7 +12,7 @@ header {
   z-index: 100;
   width: 100%;
   padding: 17px 0;
-  // background-color: rgba($color: #000000, $alpha: .4);
+  background-color: rgba($color: #000000, $alpha: .9);
   .inner-wrap {
     display: flex;
     justify-content: space-between;
@@ -21,6 +21,12 @@ header {
       font-size: 45px;
       line-height: 49px;
       font-weight: 900;
+      display: block;
+      height: 90px;
+      width: auto;
+      img{
+        object-fit: contain;
+      }
       // background-image: url(https://images.pexels.com/photos/7004739/pexels-photo-7004739.jpeg?auto=compress&cs=tinysrgb&w=600);
       // display: block;
       // color: transparent;
@@ -31,10 +37,34 @@ header {
       color: $color-dark-orange;
     }
     nav{
+      display: flex;
+      align-items: center;
+      .hamburger_menu{
+        display: flex;
+        flex-flow: column;
+        margin-left: 25px;
+        cursor: pointer;
+        li{
+          display: block;
+          height: 4px;
+          border-radius: 3px;
+          width: 34px;
+          transform: skew(-45deg);
+          background-color: $color-dark-orange;
+          border: 1px solid $color-dark-orange;
+          &+li{
+            margin-top: 5px;
+            margin-left: 0;
+            background-color: transparent;
+          }
+        }
+      }
       ul{
         display: flex;
         align-items: center;
         li{
+  transition: .3s all ease-in-out;
+
           &+li{
             margin-left: 25px;
           }
@@ -44,6 +74,49 @@ header {
 
           }
         }
+      }
+    }
+  }
+}
+.hamburger_menu_list{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba($color: $color-electric-purple, $alpha: .5);
+  padding: 230px 45px 30px;
+  z-index: 99;
+  width: 50vw;
+  height: 100%;
+  transform: translateX(100%);
+  transition: .3s all ease-in-out;
+
+  ul{
+    li{
+      a{
+        font-size: 25px;
+        color: $color-white;
+        font-weight: 600;
+        line-height: 30px;
+      }
+      margin-bottom: 18px;
+    }
+
+  }
+}
+.mobile_menu_open{
+  .hamburger_menu_list{
+    transform: translateX(0);
+  }
+  .hamburger_menu{
+    li{
+      &:nth-child(1){
+        transform: translate(2px,5px) rotate(45deg);
+      }
+      &:nth-child(2){
+        transform: translate(2px,-2px) rotate(-45deg);
+      }
+      &:nth-child(3){
+       opacity: 0;
       }
     }
   }
