@@ -92,3 +92,38 @@ var rtl = false;
   if (rtl_status == 'rtl') {
     rtl = true;
   }
+
+
+  $("#counter").counter({
+    autoStart: true,           // true/false, default: true
+    duration: 2000,             // milliseconds, default: 1500
+    countFrom: 0,              // start counting at this number, default: 0
+    countTo: 100,                // count to this number, default: 0
+    easing: "easeInOutQuad",     // see http://gsgd.co.uk/sandbox/jquery/easing
+
+  });
+  $(document).ready(function(){
+
+    setTimeout(() => {
+      $('.render_blade').addClass('hide_blade')
+      $('html').removeClass('overflow-hidden')
+    }, 3200);
+  })
+
+
+$(".anchor_links").click(function(e) {
+e.preventDefault()
+  var id = $(this).attr('href');
+  var scroll = $(`${id}`).offset().top - 90;
+  $('html, body').animate({
+    scrollTop: scroll
+  }, 100);
+});
+
+$(window).scroll(function(){
+  if(window.scrollY > 240){
+    $('body').addClass('sticky_header')
+  }else{
+    $('body').removeClass('sticky_header')
+  }
+})

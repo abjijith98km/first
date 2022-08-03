@@ -67,15 +67,17 @@ button, input.btn{
 
 .cta_btn{
   padding: 7px 14px;
-  background-color: $color-electric-purple;
-  border: 2px solid $color-electric-purple;
+  background-color: transparent;
+  border: 1px solid $color-dark-orange;
   border-radius: 5px;
-  color: $color-black;
+  color: $color-dark-orange;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 13px;
   display: flex;
   align-items: center;
+  width: max-content;
+  display: block;
   justify-content: center;
   transition: .3s all ease-in-out;
   svg{
@@ -87,7 +89,7 @@ button, input.btn{
   }
   &:hover{
     background-color: transparent;
-    color: $color-electric-purple;
+    color: $color-dark-orange;
   }
 
 

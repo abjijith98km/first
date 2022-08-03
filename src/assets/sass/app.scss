@@ -12,7 +12,7 @@
 @import "util/spaces";
 
 // Base
-@import "base/animations";
+// @import "base/animations";
 @import "base/base";
 @import "base/typography";
 
@@ -37,6 +37,8 @@
 @import "components/title";
 @import "components/about-me";
 @import "components/projects";
+@import "components/gallery";
+@import "components/what-to-expect";
 
 
 // Should be at last

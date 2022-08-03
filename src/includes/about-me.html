@@ -1,4 +1,4 @@
-<section class="about_me">
+<section class="about_me" id="about_me">
   <div class="container">
     <div class="title">
       <h2>About <span> Me</span></h2>
@@ -6,8 +6,8 @@
     <div class="about_me_inner">
       <div class="about_me_bodycontent row">
         <div class="col-12 col-lg-5" data-aos="fade-right" data-aos-duration="1000">
-          <div class="dev_image">
-            <picture>
+          <div class="dev_image" data-tilt  >
+            <picture class="static">
               <!-- <source media="(max-width:767px)" srcset="uploads/about-us/about-hero-mobile.webp" type="image/webp"> -->
               <!-- <source media="(max-width:767px)" srcset="uploads/about-us/about-hero-mobile.jpg" type="image/jpeg"> -->
               <source srcset="uploads/home/dev.webp" type="image/webp" />
@@ -16,6 +16,18 @@
                 class="lazyload"
                 loading="lazy"
                 data-src="uploads/home/dev.jpg"
+                alt="Abhijith"
+              />
+            </picture>
+            <picture class="hover">
+              <!-- <source media="(max-width:767px)" srcset="uploads/about-us/about-hero-mobile.webp" type="image/webp"> -->
+              <!-- <source media="(max-width:767px)" srcset="uploads/about-us/about-hero-mobile.jpg" type="image/jpeg"> -->
+              <source srcset="uploads/home/devhover.webp" type="image/webp" />
+              <source srcset="uploads/home/devhover.jpg" type="image/jpeg" />
+              <img
+                class="lazyload"
+                loading="lazy"
+                data-src="uploads/home/devhover.jpg"
                 alt="Abhijith"
               />
             </picture>

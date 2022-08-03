@@ -1,5 +1,6 @@
 .title{
-  margin-bottom: 35px;
+  margin-bottom: 65px;
+  display: block;
   h1, h2{
     display: inline-flex;
     align-items: center;
@@ -10,6 +11,7 @@
     color: $color-white;
     position: relative;
     font-family: $base-font-family;
+    text-transform: capitalize;
     &::after{
       transition: .3s all ease-in-out;
       content: '';

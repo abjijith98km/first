@@ -1,0 +1,40 @@
+.what_to_expect{
+  padding: 90px 0;
+  width: 100%;
+  .what_to_expect_inner{
+    .expectation_block{
+      margin-bottom: 50px;
+      &:nth-child(even){
+        flex-flow: row-reverse;
+      }
+      .featr_img{
+        width: 100%;
+        height: 350px;
+        border-radius: 14px;
+        overflow: hidden;
+        img{
+          object-fit: cover;
+        }
+      }
+      .featr_content{
+        padding-top: 60px;
+        h3{
+          font-size: 30px;
+          font-weight: 500;
+          line-height: 40px;
+          max-width: 360px;
+          margin-bottom: 25px;
+          color: $color-dark-orange;
+        }
+        p{
+          font-size: 17px;
+          line-height: 25px;
+          font-weight: 300;
+          opacity: .7;
+          color: $color-white;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

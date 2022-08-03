@@ -1,3 +1,48 @@
 footer{
+  padding: 50px 0 15px;
+  border-top: 1px solid #515151;
+  .footer_inner{
+    .top_row{
+      margin-bottom: 90px;
+      h4{
+        font-size: 45px;
+        color: $color-white;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 80px;
+      }
+      .get_in_touch{
+        font-size: 30px;
+        color: $color-white;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 1;
+        border-radius: 50px;
+        width: max-content;
+        margin-left: auto;
+        text-align: right;
+        display: block;
+        border: 1px solid #515151;
+        padding: 15px 30px;
+        svg{
+          width: 23px;
+          height: 40px;
+          fill: #fff;
+          object-fit: contain;
+        }
+      }
+    }
+    .bottom_row{
+      .copy_right{
+        p{
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 22px;
+          color: rgba($color: #fff, $alpha: .7);
+        }
+      }
+    }
+  }
   
 }
+
